@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Money Tree Clicker",
+  "version": "0.1",
+  "browser_action":
+  {
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "popup.html",
+    "chrome_style": true
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+   "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-2.1.4.min.js", "content.js"] 
+    }
+  ]
+}
